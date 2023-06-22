@@ -1,0 +1,150 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* outline: 1px solid red; */
+}
+
+@media (width < 700px) {
+    header {
+        & h1 {
+            font-size: 3em !important;
+        }
+
+        & p {
+            font-size: 1.5em !important;
+        }
+    }
+
+    nav {
+        flex-direction: column;
+        position: unset !important;
+        top: unset !important;
+
+        & a:first-child {
+            margin-right: unset;
+        }
+
+        & a {
+            text-align: center !important;
+        }
+    }
+
+    section {
+        & h1 {
+            font-size: 3em !important;
+        }
+    }
+}
+
+:root {
+    scroll-behavior: smooth;
+    scroll-padding-top: 65px;
+
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    min-height: 100vh;
+
+    & nav {
+        align-items: center;
+        background-color: bisque;
+        display: flex;
+        position: sticky;
+        top: 0;
+
+        & a {
+            color: black;
+            font-size: 1.5em;
+            font-weight: bolder;
+            padding: 10px 25px;
+            text-decoration: none;
+
+            & img {
+                height: 50px;
+            }
+        }
+    }
+
+    & header {
+        align-items: start;
+        background-color: rgba(0, 0, 0, 0.5);
+        background-blend-mode: multiply;
+        background-image: url('../img/banner1.jpg');
+        background-position: center;
+        background-size: cover;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 50vh;
+        padding: 50px;
+        text-shadow: 1px 1.5px 3px black;
+
+        & h1 {
+            font-weight: bolder;
+            font-size: 5em;
+        }
+
+        & p {
+            font-weight: lighter;
+            font-size: 3em;
+        }
+    }
+
+    & section {
+        background-color: burlywood;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+
+        & h1 {
+            color: white;
+            font-weight: bolder;
+            font-size: 5em;
+            text-align: center;
+        }
+
+        & .box-container {
+            align-items: center;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            padding: 25px;
+
+            & .box {
+                display: flex;
+                flex-direction: column;
+                width: 500px;
+
+                & img {
+                    width: 100%;
+                }
+
+                & p {
+                    background-color: chocolate;
+                    font-size: 1.5em;
+                    font-style: italic;
+                    padding: 20px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    & footer {
+        background-color: rgb(14, 13, 13);
+        color: white;
+        padding: 20px;
+        text-align: center;
+    }
+}
+
+.push-right {
+    margin-right: auto;
+}
