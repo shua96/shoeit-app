@@ -35,6 +35,67 @@
             font-size: 3em !important;
         }
     }
+
+
+    & .info-section {
+        background-color: burlywood;
+
+
+        & .info-container {
+            flex-direction: column;
+
+            & aside {
+                display: flex;
+
+
+                & h1 {}
+
+                & p {}
+
+                & form {
+
+
+                    & input {}
+
+                    & select {}
+                }
+            }
+
+            & .about-img {
+                background-image: url(../img/about-img.jpeg);
+            }
+
+            & .contact-img {
+                background-image: url(../img/contact-img.jpeg);
+            }
+
+            & article {}
+        }
+    }
+
+    .table {
+        display: block;
+    }
+
+    .row {
+        padding: 14px 0 7px;
+        display: block;
+    }
+
+    .row.header {
+        padding: 0;
+        height: 6px;
+    }
+
+    .row.header .cell {
+        display: none;
+    }
+
+    .cell {
+        padding: 2px 16px;
+        display: block;
+    }
+
 }
 
 :root {
@@ -69,18 +130,31 @@ main {
         }
     }
 
+    & .home {
+        background-image: url('../img/banner1.jpg');
+        min-height: 50vh;
+    }
+
+    & .about {
+        background-image: url('../img/banner2.jpeg');
+        min-height: 100vh;
+    }
+
+    & .about {
+        background-image: url('../img/banner3.jpeg');
+        min-height: 100vh;
+    }
+
     & header {
         align-items: start;
         background-color: rgba(0, 0, 0, 0.5);
         background-blend-mode: multiply;
-        background-image: url('../img/banner1.jpg');
         background-position: center;
         background-size: cover;
         color: white;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        min-height: 50vh;
         padding: 50px;
         text-shadow: 1px 1.5px 3px black;
 
@@ -95,7 +169,7 @@ main {
         }
     }
 
-    & section {
+    & .gallery {
         background-color: burlywood;
         display: flex;
         flex-direction: column;
@@ -111,7 +185,6 @@ main {
         & .box-container {
             align-items: center;
             display: flex;
-            flex-direction: row;
             flex-wrap: wrap;
             justify-content: center;
             gap: 10px;
@@ -137,6 +210,149 @@ main {
         }
     }
 
+    & .info-section {
+
+
+        & .info-container {
+            display: flex;
+            margin: 25px;
+            gap: 10px;
+
+            & aside {
+                align-items: center;
+                background-color: rgba(0, 0, 0, 0.5);
+                border-radius: 15px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                max-width: 500px;
+
+                & h1 {
+                    padding-top: 15px;
+                    color: white;
+                    font-size: 2.5em;
+                }
+
+                & p {
+                    color: white;
+                    font-size: 1.2em;
+                    font-style: italic;
+                    padding: 15px;
+                    text-align: justify;
+                }
+
+                & form {
+                    display: flex;
+                    flex-direction: column;
+                    padding: 25px;
+                    position: relative;
+                    width: 500px;
+                    margin: 25px;
+
+                    & input {
+                        margin: 5px;
+                        width: 100%;
+                        height: 50px;
+                        border-radius: 15px;
+                        padding: 5px 20px;
+                        font-size: 25px;
+                        outline: none;
+                        border: 1px solid #999;
+                    }
+
+                    & a {
+                        margin: 5px;
+                        background-color: white;
+                        width: 100%;
+                        height: 50px;
+                        border-radius: 15px;
+                        padding: 5px 20px;
+                        font-size: 25px;
+                        outline: none;
+                        border: 1px solid #999;
+                        text-align: center;
+                        text-decoration: none;
+                        color: black;
+                    }
+                }
+            }
+
+            & .about-img {
+                background-image: url(../img/about-img.jpeg);
+            }
+
+            & .contact-img {
+                background-image: url(../img/contact-img.jpeg);
+            }
+
+            & article {
+                background-position: center;
+                background-size: cover;
+                display: flex;
+                flex-grow: 1;
+            }
+        }
+    }
+
+    & .record-section {
+        align-items: center;
+        background-color: burlywood;
+        display: flex;
+        flex-grow: 1;
+    }
+
+    & .wrapper {
+        margin: 0 auto;
+        padding: 40px;
+        max-width: 800px;
+
+        & .table {
+            margin: 0 0 40px 0;
+            width: 100%;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+            display: table;
+
+            & .row {
+                display: table-row;
+                background: #f6f6f6;
+
+                & a {
+                    text-decoration: none;
+                    color: black;
+                }
+
+                & .cell {
+                    padding: 6px 12px;
+                    display: table-cell;
+                }
+            }
+
+            & .row:nth-of-type(odd) {
+                background: #e9e9e9;
+            }
+
+            & .row.header {
+                font-weight: 900;
+                color: #ffffff;
+                background: #ea6153;
+            }
+
+            & header-center {
+                display: table-row;
+            }
+        }
+    }
+
+    & section.pop-up {
+        display: flex;
+        min-width: 100vw;
+
+        & dialog {
+            top: 40%;
+            left: 50%;
+        }
+    }
+
     & footer {
         background-color: rgb(14, 13, 13);
         color: white;
@@ -147,4 +363,14 @@ main {
 
 .push-right {
     margin-right: auto;
+}
+
+dialog {
+    border-radius: 0.5rem;
+    text-align: center;
+}
+
+dialog::backdrop {
+    background: pink;
+    opacity: 60%;
 }
