@@ -290,6 +290,7 @@ main {
                 background-size: cover;
                 display: flex;
                 flex-grow: 1;
+
             }
         }
     }
